@@ -18,28 +18,18 @@
         }
     </style>
 <body>
-    <section>
-        <nav class="menu">
-            <img id="logo" src="./assets/images/logo-good.png" alt="">
-            <ul>
-                <li><a href="./log.html">Calender</a></li>
-                <li><a href="#">Summary</a></li>
-            </ul>
-        </nav>
-    </section>
-    <div class="login">
-        <form id="loginForm" onsubmit="return loginUser()">
-            <p><strong>Login:</strong></p>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required autofocus>
-    
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required autofocus>
-    
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-    
+
+    <form id="loginForm" onsubmit="return loginUser()">
+        <p><strong>Login:</strong></p>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required autofocus>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required autofocus>
+
+        <button type="submit">Submit</button>
+    </form>
+
 
 
     <script src = "./login.js"></script>
