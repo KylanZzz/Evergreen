@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <link rel="stylesheet" href="log.css">
+</head>
+<body>
+  <div id = "nav-bar">
+
+  </div>
+
+  <div id = "frame">
+
+    <div id = "weekly-bar">
+
+    </div>
+
+
+    <div id = "main-screen">
+      <div id="daily-view-container">
+
+      </div>
+
+      <div class="file-input">
+        <label for="fileInput" class="custom-file-upload">
+          <span style="font-size: 30px;">+</span>
+          <br>
+          Upload
+        </label>
+        <input type="file" id = "fileInput" style="display:none;">
+      </div>
+
+      <button id="openDrawerButton" onclick="toggleDrawer()">Open Drawer</button>
+
+      <div id="drawerContainer" onclick="closeDrawer()">
+        <div id="drawerContent">
+          <h2>Drawer Content</h2>
+          <p>This is the content of the expandable drawer.</p >
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <script src = "log.js"></script>
+</body>
+</html>
