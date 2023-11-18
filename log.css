@@ -8,17 +8,11 @@ body{
     flex-wrap: wrap;
     background-color: lightblue;
     width: 100vw;
-    height: 85vh;
-}
-
-#nav-bar{
-    height: 15vh;
-    width: 100vw;
-    background-color: grey;
+    height: 87vh;
 }
 
 #weekly-bar{
-    height: 85vh;
+    height: 87vh;
     width: 15vw;
     background-color: aquamarine;
     overflow-y: auto;
@@ -46,7 +40,7 @@ body{
 }
 
 #main-screen{
-    height: 85vh;
+    height: 87vh;
     width: 85vw;
     background-color: antiquewhite;
     position: relative;
@@ -87,7 +81,7 @@ body{
     border: 4px double dodgerblue;
     border-radius: 20px;
     background-color: dodgerblue;
-    width: 240px;
+    width: 210px;
     font-size: 14px;
     white-space: pre-wrap;
     margin-bottom: 20px;
@@ -148,4 +142,35 @@ body{
     right: -65px;
     transform: translateY(-50%) rotate(-90deg); /* Combine transformations */
     transition: right 0.6s ease;
+}
+
+
+:root{
+    --top-bar-color: #e0efb8;
+    --background-color: #f7feee;
+
+}
+.menu{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    background-color: var(--top-bar-color)
+    
+}
+.menu li{
+    list-style: none;
+    
+}
+.menu ul{
+    display: flex;
+    gap: 50px;
+    margin-left: auto;
+    margin-right: 100px;
+    font-size: 20px;
+}
+
+#logo{
+    width: 100px;
+    height: auto;
 }
