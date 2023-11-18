@@ -6,7 +6,7 @@ function loginUser() {
             // Replace the following condition with your authentication logic
             if (username === 'yourUsername' && password === 'yourPassword') {
                 // Redirect to another page (replace 'redirect.html' with your desired page)
-                window.location.href = 'logs.html';
+                window.location.href = './log.html';
                 return false; // Prevent the form from submitting
             } else {
                 // Display an error message (you can customize this part)

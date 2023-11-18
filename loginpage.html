@@ -4,24 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="login.css">
-
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./login.css">
 </head>
+    <style>
+        .login{
+            display: flex;
+            margin-left: auto;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            top: 90px;
+        }
+    </style>
 <body>
+    <section>
+        <nav class="menu">
+            <img id="logo" src="./assets/images/logo-good.png" alt="">
+            <ul>
+                <li><a href="./log.html">Calender</a></li>
+                <li><a href="#">Summary</a></li>
+            </ul>
+        </nav>
+    </section>
+    <div class="login">
+        <form id="loginForm" onsubmit="return loginUser()">
+            <p><strong>Login:</strong></p>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required autofocus>
+    
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required autofocus>
+    
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
 
-    <form id="loginForm" onsubmit="return loginUser()">
-        <p><strong>Login:</strong></p>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required autofocus>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required autofocus>
-
-        <button type="submit">Submit</button>
-    </form>
-
-
-    <script src = "login.js"></script>
+    <script src = "./login.js"></script>
 
 
 </body>
