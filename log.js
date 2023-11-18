@@ -1,5 +1,7 @@
 const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 const dailyViewContainer = document.getElementById('daily-view-container');
+const listOfNutrition = ['Calories', 'Saturated fats', 'Protein', 'Added Sugars']
+const listOfFoods = ['Scrambled Eggs', 'Ribeye Steak', 'Pasta and Meatballs', 'Fried rice', 'Salmon', 'Cereal', 'Curry', 'Sandwich', 'Ham and Eggs'];
 
 let daysOfWeek = []
 for (let i = 0; i < days.length; i++){
@@ -13,10 +15,18 @@ for (let i = 0; i < days.length; i++){
     textDiv.style.flex = '1';
     textDiv.textContent = day;
 
+    // const daySummaryDiv = document.createElement('div'){
+    //     day.
+    // }
+
     const outterDayContainer = document.createElement('div')
     outterDayContainer.classList.add('outer-day')
     outterDayContainer.appendChild(textDiv);
     outterDayContainer.appendChild(dayElement);
+    if (i % 2 === 0){
+        outterDayContainer.style.backgroundColor = 'floralwhite';
+        dayElement.style.backgroundColor = 'floralwhite';
+    }
 
     dailyViewContainer.appendChild(outterDayContainer);
     daysOfWeek.push(dayElement);
@@ -47,30 +57,28 @@ function addNewDailyLog(day){
     logElement.classList.add('log')
 
     const logHeader = document.createElement('h3');
-    logHeader.textContent = 'Scrambled Eggs';
+    logHeader.textContent = listOfFoods[Math.floor(Math.random() * listOfFoods.length)];
     logElement.appendChild(logHeader);
 
     const logUL = document.createElement('ul');
     logUL.style.listStyleType = 'none';
     logUL.style.textAlign = 'left';
 
-    const firstItem = document.createElement('li');
-    firstItem.textContent = 'Calories: ' + 1520;
-    logUL.appendChild(firstItem);
-    const secondItem = document.createElement('li');
-    secondItem.textContent = 'Protein: ' + 68;
-    logUL.appendChild(secondItem);
+    for (let i = 0; i < listOfNutrition.length; i++) {
+        const item = document.createElement('li');
+        item.textContent = listOfNutrition[i] + ': ' + Math.floor(Math.random() * 1000);
+        logUL.appendChild(item);
+    }
 
     logElement.appendChild(logUL);
     daysOfWeek[dayIndex].appendChild(logElement);
+}
 
-
-    // test code for now to add week log
-    const date = Date()
+function addNewWeek(weekName){
     const weekContainer = document.getElementById('weekly-bar');
     const weekElement = document.createElement('button');
     weekElement.classList.add('week-log');
-    weekElement.textContent = 'Week of 11/18/23';
+    weekElement.textContent = 'Week of ' + weekName;
     weekContainer.appendChild(weekElement);
 }
 
@@ -87,3 +95,21 @@ function closeDrawer() {
     document.getElementById('drawerContainer').style.right = '-500px';
     document.getElementById('openDrawerButton').style.right = '-65px';
 }
+
+// make some sample data
+function initializeSampleData(){
+    const sampleWeeksList = ['10/13/23', '10/20/23', '10/27/23', '11/2/23', '11/9/23', '11/16/23', '11/23/23', '11/30/23', '12/6/23', '12/13/23', '12/20/23'];
+    for (let i = 0; i < days.length; i ++){
+        for (let j = 0; j < (Math.floor(Math.random() * 5) + 3); j++){
+            addNewDailyLog(days[i]);
+        }
+    }
+    for (let i = 0; i < sampleWeeksList.length; i++){
+        addNewWeek(sampleWeeksList[i]);
+    }
+
+    for (let i = 0; i < daysOfWeek.length; i++) {
+        daysOfWeek[i].clear;
+    }
+}
+initializeSampleData();

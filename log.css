@@ -13,16 +13,18 @@ body{
 
 #weekly-bar{
     height: 87vh;
-    width: 15vw;
-    background-color: aquamarine;
+    width: calc(15vw - 5px);
+    background-color: #84BF69;
     overflow-y: auto;
-}
+    border-right: 5px solid darkolivegreen;
+    }
 
 .week-log{
+    width: 12.5vw;
     border: 0;
-    background-color: lightseagreen;
-    color: lightgray;
-    font: bold 18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: seagreen;
+    color: white;
+    font: bold 16px 'Chalkduster', fantasy ,Helvetica Neue, Helvetica, Arial, sans-serif;
     padding: 20px;
     margin: 10px;
     border-radius: 20px;
@@ -52,12 +54,14 @@ body{
     overflow-x: auto;
     white-space: nowrap;
     height: inherit;
+    border-radius: 0 4px 4px 0;
 }
 
+
 .day {
-    background-color: lightskyblue;
+    /* background-color: green; */
     flex: 10;
-    color: lightgray;
+    color: dimgrey;
     font: bold 30px "Helvetica Neue", Helvetica, Arial, sans-serif;
     width: 250px;
     text-align: center;
@@ -65,27 +69,37 @@ body{
     white-space: nowrap;
 }
 
+/* #daily-view-container .outer-day:nth-child(even){
+    background: #f0f0f2;
+} */
+
+.day, .outer-day{
+    background-color: #d8f6b4;
+}
+
+
 .outer-day{
     display: flex;
     flex-direction: column;
     flex: 0 0 auto;
-    color: white;
-    text-decoration: underline;
-    background-color: lightskyblue;
-    font: bold 30px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #35580d;
+    /*text-decoration: underline;*/
+    /* background-color: green; */
+    font: bold 30px 'Chalkduster', fantasy, Helvetica Neue, Helvetica, Arial, sans-serif;
     text-align: center;
     padding: 20px;
+
 }
 
 .log{
-    border: 4px double dodgerblue;
+    border: 4px double #FFF06E;
     border-radius: 20px;
-    background-color: dodgerblue;
-    width: 210px;
+    background-color: #FFF06E; /*#A2D2FF*/
+    width: 240px;
     font-size: 14px;
+    color: seagreen;
     white-space: pre-wrap;
     margin-bottom: 20px;
-    box-shadow: 3px 7px 3px midnightblue;
 }
 
 .custom-file-upload {
@@ -95,7 +109,7 @@ body{
     border: 2px dashed #ccc;
     border-radius: 30%;
     text-align: center;
-    background-color: #4CAF50;
+    background-color: #84BF69;
     color: white;
     position: absolute;
     bottom: 5vh;
@@ -120,7 +134,7 @@ body{
     height: 450px;
     right: -500px; /* Start off-screen on the right */
     width: 500px;
-    background-color: #3498db;
+    background-color: #84BF69;
     color: #fff;
     transition: right 0.6s ease;
 }
@@ -132,9 +146,8 @@ body{
 #openDrawerButton {
     cursor: pointer;
     padding: 10px 20px;
-    background-color: #3498db;
+    background-color: #84BF69;
     color: #fff;
-    border: none;
     border-radius: 5px;
     font-size: 16px;
     position: fixed;
@@ -146,8 +159,8 @@ body{
 
 
 :root{
-    --top-bar-color: #e0efb8;
-    --background-color: #f7feee;
+    --top-bar-color: #9cd65b;
+    --background-color: #18E101;
 
 }
 .menu{
@@ -155,8 +168,8 @@ body{
     margin: 0;
     padding: 0;
     align-items: center;
-    background-color: var(--top-bar-color)
-    
+    background-color: var(--top-bar-color);
+    border-bottom: 5px solid darkolivegreen;
 }
 .menu li{
     list-style: none;
@@ -167,10 +180,16 @@ body{
     gap: 50px;
     margin-left: auto;
     margin-right: 100px;
-    font-size: 20px;
+    font: bold 30px 'Chalkduster', fantasy;
 }
+
+.menu a{
+        color: #35580d;
+    }
+
 
 #logo{
     width: 100px;
     height: auto;
 }
+
