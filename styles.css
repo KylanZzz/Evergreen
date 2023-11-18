@@ -9,8 +9,11 @@ a{
     text-decoration: none;
 }
 :root{
-    --top-bar-color: #e0efb8;
-    --background-color: #f7feee;
+    /* --top-bar-color: #9cd65b; */
+    /* --top-bar-color: linear-gradient(to right, #9cd65b, #e0efb8); */
+    /* --background-color: linear-gradient(to right, #f7feee, #18E101); */
+    /* --background-color: #18E101; */
+    
 
 }
 .menu{
@@ -18,7 +21,8 @@ a{
     margin: 0;
     padding: 0;
     align-items: center;
-    background-color: var(--top-bar-color)
+    background: linear-gradient(to right, #e0efb8, #9cd65b);
+    border-bottom: 5px solid darkolivegreen;
     
 }
 .menu li{
@@ -30,8 +34,12 @@ a{
     gap: 50px;
     margin-left: auto;
     margin-right: 100px;
-    font-size: 20px;
+    font: bold 30px 'Chalkduster', fantasy;
 }
+
+.menu a{
+        color: #35580d;
+    }
 
 #logo{
     width: 100px;

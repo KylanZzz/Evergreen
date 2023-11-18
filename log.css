@@ -129,6 +129,7 @@ body{
 
 
 #drawerContainer {
+    font-size: 24px;
     position: fixed;
     top: 26%;
     height: 450px;
@@ -141,6 +142,10 @@ body{
 
 #drawerContent {
     padding: 20px;
+}
+
+#weekly-summary-header{
+    text-align: center;
 }
 
 #openDrawerButton {
@@ -159,8 +164,8 @@ body{
 
 
 :root{
-    --top-bar-color: #9cd65b;
-    --background-color: #18E101;
+    /* --top-bar-color: #9cd65b;
+    --background-color: #18E101; */
 
 }
 .menu{
@@ -168,7 +173,7 @@ body{
     margin: 0;
     padding: 0;
     align-items: center;
-    background-color: var(--top-bar-color);
+    background: linear-gradient(to right, #e0efb8, #9cd65b);
     border-bottom: 5px solid darkolivegreen;
 }
 .menu li{
