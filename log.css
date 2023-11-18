@@ -21,6 +21,28 @@ body{
     height: 85vh;
     width: 15vw;
     background-color: aquamarine;
+    overflow-y: auto;
+}
+
+.week-log{
+    border: 0;
+    background-color: lightseagreen;
+    color: lightgray;
+    font: bold 18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+    transition: background-color 1s ease, all .1s linear;
+    box-shadow: 0 5px 0 darkgreen;
+}
+
+.week-log:active{
+    box-shadow: 0 2px 0 darkolivegreen;
+    transform:translateY(3px);
+}
+
+.week-log:hover{
+    background-color: seagreen;
 }
 
 #main-screen{
@@ -39,26 +61,37 @@ body{
 }
 
 .day {
-    flex: 0 0 auto;
     background-color: lightskyblue;
-    color: white;
-    text-decoration: underline;
+    flex: 10;
+    color: lightgray;
     font: bold 30px "Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding: 30px;
     width: 250px;
     text-align: center;
     overflow-y: auto;
     white-space: nowrap;
 }
 
+.outer-day{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    color: white;
+    text-decoration: underline;
+    background-color: lightskyblue;
+    font: bold 30px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
 .log{
     border: 4px double dodgerblue;
-    border-radius: 15px;
+    border-radius: 20px;
     background-color: dodgerblue;
-    width: 250px;
+    width: 240px;
     font-size: 14px;
     white-space: pre-wrap;
-    margin-top: 30px;
+    margin-bottom: 20px;
+    box-shadow: 3px 7px 3px midnightblue;
 }
 
 .custom-file-upload {
@@ -66,13 +99,19 @@ body{
     padding: 10px;
     cursor: pointer;
     border: 2px dashed #ccc;
-    border-radius: 50%;
+    border-radius: 30%;
     text-align: center;
     background-color: #4CAF50;
     color: white;
     position: absolute;
     bottom: 5vh;
     right: 3vw;
+    transition: border-radius 1s ease, background-color 1s ease;
+}
+
+.custom-file-upload:hover{
+    border-radius: 50%;
+    background-color: darkgreen;
 }
 
 .custom-file-upload input {
@@ -106,7 +145,7 @@ body{
     font-size: 16px;
     position: fixed;
     top: 55%;
-    right: -50px;
+    right: -65px;
     transform: translateY(-50%) rotate(-90deg); /* Combine transformations */
     transition: right 0.6s ease;
 }
