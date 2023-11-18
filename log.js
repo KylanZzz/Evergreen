@@ -107,9 +107,5 @@ function initializeSampleData(){
     for (let i = 0; i < sampleWeeksList.length; i++){
         addNewWeek(sampleWeeksList[i]);
     }
-
-    for (let i = 0; i < daysOfWeek.length; i++) {
-        daysOfWeek[i].clear;
-    }
 }
 initializeSampleData();
